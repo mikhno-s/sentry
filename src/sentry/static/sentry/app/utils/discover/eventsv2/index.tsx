@@ -113,7 +113,7 @@ class EventsV2 extends React.Component<Props, State> {
         this.setState({
           isLoading: false,
           tableFetchID: undefined,
-          error: err.responseJSON.detail,
+          error: err?.responseJSON?.detail ?? null,
           tableData: null,
         });
       });
